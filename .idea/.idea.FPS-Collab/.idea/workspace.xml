@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d2fc5c32-dc42-42b9-a81d-3ee865a4b8bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FPS-Collab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPS-Collab/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MazeTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MazeTile.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +29,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "dev",
+    "git-widget-placeholder": "dissolve",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -45,7 +46,7 @@
 }]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="E:\Unity\Editor\2022.3.4f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Program Files\Unity\2022.3.4f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;E:\Projects\GitHub Repositories\Unity\FPS-Collab&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\Projects\GitHub Repositories\Unity\FPS-Collab" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -53,7 +54,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="E:\Unity\Editor\2022.3.4f1\Editor\Unity.exe" />
+      <option name="EXE_PATH" value="D:\Program Files\Unity\2022.3.4f1\Editor\Unity.exe" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;E:\Projects\GitHub Repositories\Unity\FPS-Collab&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="E:\Projects\GitHub Repositories\Unity\FPS-Collab" />
       <option name="PASS_PARENT_ENVS" value="1" />
