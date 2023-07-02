@@ -23,26 +23,22 @@ public class DissolveAnimator : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(visibleMazeDelay);
-            float radius = endRadius;
-            while (radius >= startRadius)
-            {
-                radius -= endRadius * Time.deltaTime;
-
-                dissolveController.target1Radius = radius;
-                dissolveController.target2Radius = radius;
-                yield return null;
-            }
-
+            yield return AnimateMove(endRadius, startRadius);
             yield return new WaitForSeconds(lightsOutDelay);
-            radius = startRadius;
-            while (radius <= endRadius)
-            {
-                radius += endRadius * Time.deltaTime;
-
-                dissolveController.target1Radius = radius;
-                dissolveController.target2Radius = radius;
-                yield return null;
-            }
+            yield return AnimateMove(startRadius, endRadius);
         }
+    }
+
+    private IEnumerator AnimateMove(float startValue, float endValue)
+    {
+        for (float i = 0; i < 1; i += Time.deltaTime)
+        {
+            float radius = Mathf.Lerp(startValue, endValue, i);
+            dissolveController.target1Radius = radius;
+            dissolveController.target2Radius = radius;
+            yield return null;
+        }
+        dissolveController.target1Radius = endValue;
+        dissolveController.target2Radius = endValue;
     }
 }
