@@ -25,13 +25,13 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _AD_CUTOUT_GEOMETRIC_COUNT_TWO
   - _AD_CUTOUT_GEOMETRIC_TYPE_SPHERE
   - _AD_CUTOUT_STANDARD_SOURCE_CUSTOM_MAP
   - _AD_EDGE_BASE_SOURCE_ALL
   - _AD_STATE_ENABLED
   - _GLOSSYREFLECTIONS_OFF
   m_InvalidKeywords:
-  - _AD_CUTOUT_GEOMETRIC_COUNT_ONE
   - _AD_CUTOUT_STANDARD_SOURCE_MAPS_MAPPING_TYPE_DEFAULT
   - _AD_EDGE_ADDITIONAL_COLOR_NONE
   - _AD_EDGE_UV_DISTORTION_SOURCE_DEFAULT
@@ -215,9 +215,9 @@ Material:
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AdvancedDissolveCutoutGeometric1Height: 1
-    - _AdvancedDissolveCutoutGeometric1Radius: 2.0830266
+    - _AdvancedDissolveCutoutGeometric1Radius: 12
     - _AdvancedDissolveCutoutGeometric2Height: 1
-    - _AdvancedDissolveCutoutGeometric2Radius: 1
+    - _AdvancedDissolveCutoutGeometric2Radius: 12
     - _AdvancedDissolveCutoutGeometric3Height: 1
     - _AdvancedDissolveCutoutGeometric3Radius: 1
     - _AdvancedDissolveCutoutGeometric4Height: 1
@@ -254,7 +254,7 @@ Material:
     - _AdvancedDissolveEdgeBaseWidthStandard: 0.1
     - _AdvancedDissolveEdgeGIMetaPassMultiplier: 1
     - _AdvancedDissolveEdgeUVDistortionStrength: 0
-    - _AdvancedDissolveKeywordCutoutGeometricCount: 0
+    - _AdvancedDissolveKeywordCutoutGeometricCount: 1
     - _AdvancedDissolveKeywordCutoutGeometricType: 3
     - _AdvancedDissolveKeywordCutoutStandardSource: 2
     - _AdvancedDissolveKeywordCutoutStandardSourceMapsMappingType: 0
@@ -421,9 +421,9 @@ Material:
     m_Colors:
     - _AdvancedDissolveBakedKeywords: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric1Normal: {r: 1, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveCutoutGeometric1Position: {r: -2, g: 0.25, b: 4.62, a: 0}
+    - _AdvancedDissolveCutoutGeometric1Position: {r: 1.5, g: 0, b: 11.75, a: 0}
     - _AdvancedDissolveCutoutGeometric2Normal: {r: 1, g: 0, b: 0, a: 0}
-    - _AdvancedDissolveCutoutGeometric2Position: {r: 0, g: 0, b: 0, a: 0}
+    - _AdvancedDissolveCutoutGeometric2Position: {r: -4.5, g: 0, b: 19.25, a: 0}
     - _AdvancedDissolveCutoutGeometric3Normal: {r: 1, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric3Position: {r: 0, g: 0, b: 0, a: 0}
     - _AdvancedDissolveCutoutGeometric4Normal: {r: 1, g: 0, b: 0, a: 0}
