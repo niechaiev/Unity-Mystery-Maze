@@ -1,18 +1,19 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private const string RunningAnimationParameterName = "isRunning";
+    private const string HorizontalAxisName = "Horizontal";
+    private const string VerticalAxisName = "Vertical";
+    private const string JumpButtonName = "Jump";
+
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Transform characterTransform;
     [SerializeField] private Animator characterAnimator;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundMask;
 
-    [Header("Parameters")]
+    [Header("Parameters")] 
     [SerializeField] private float gravity = -15f;
     [SerializeField] private float jumpHeight = 0.5f;
     [SerializeField] private float speed = 3f;
@@ -22,8 +23,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private float turnSmoothVelocity;
     private float turnSmoothTime = 0.1f;
+    private readonly int runningAnimationId = Animator.StringToHash(RunningAnimationParameterName);
 
-    void Update()
+    private void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -32,15 +34,13 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
-
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-
+        float x = Input.GetAxis(HorizontalAxisName);
+        float z = Input.GetAxis(VerticalAxisName);
+        
         Vector3 move = new Vector3(x, 0, z).normalized;
         if (move.magnitude >= 0.1f)
         {
-            characterAnimator.SetBool("isRunning", true);
+            characterAnimator.SetBool(runningAnimationId, true);
             float targetAngle = Mathf.Atan2(move.x, move.z) * Mathf.Rad2Deg;
             float angle = Mathf.SmoothDampAngle(characterTransform.eulerAngles.y, targetAngle, ref turnSmoothVelocity,
                 turnSmoothTime);
@@ -49,11 +49,10 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            characterAnimator.SetBool("isRunning", false);
+            characterAnimator.SetBool(runningAnimationId, false);
         }
-
-
-        if (isGrounded && Input.GetButtonDown("Jump"))
+        
+        if (isGrounded && Input.GetButtonDown(JumpButtonName))
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
