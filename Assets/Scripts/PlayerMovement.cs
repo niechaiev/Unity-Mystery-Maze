@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -12,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator characterAnimator;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundMask;
+    [SerializeField] private Transform spawnPosition;
 
     [Header("Parameters")] 
     [SerializeField] private float gravity = -15f;
@@ -25,7 +28,20 @@ public class PlayerMovement : MonoBehaviour
     private float turnSmoothTime = 0.1f;
     private readonly int runningAnimationId = Animator.StringToHash(RunningAnimationParameterName);
 
+
+
+    private void Start()
+    {
+        Respawn();
+    }
+
     private void Update()
+    {
+        MovePlayer();
+        HandleGravity();
+    }
+
+    private void HandleGravity()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -34,9 +50,16 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f;
         }
 
+        velocity.y += gravity * Time.deltaTime;
+
+        characterController.Move(velocity * Time.deltaTime);
+    }
+
+    private void MovePlayer()
+    {
         float x = Input.GetAxis(HorizontalAxisName);
         float z = Input.GetAxis(VerticalAxisName);
-        
+
         Vector3 move = new Vector3(x, 0, z).normalized;
         if (move.magnitude >= 0.1f)
         {
@@ -56,9 +79,12 @@ public class PlayerMovement : MonoBehaviour
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
+    }
 
-        velocity.y += gravity * Time.deltaTime;
-
-        characterController.Move(velocity * Time.deltaTime);
+    public void Respawn()
+    {
+        characterController.enabled = false;
+        transform.position = spawnPosition.position;
+        characterController.enabled = true;
     }
 }
