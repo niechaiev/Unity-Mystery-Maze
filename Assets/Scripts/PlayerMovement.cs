@@ -1,8 +1,9 @@
 using System;
 using System.Collections;
+using Unity.Netcode;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
     private const string RunningAnimationParameterName = "isRunning";
     private const string HorizontalAxisName = "Horizontal";
@@ -14,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator characterAnimator;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundMask;
-    [SerializeField] private Transform spawnPosition;
+    [SerializeField] private GameObject spawnPosition;
 
     [Header("Parameters")] 
     [SerializeField] private float gravity = -15f;
@@ -57,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer()
     {
+        if(!IsOwner) return;
+        
         float x = Input.GetAxis(HorizontalAxisName);
         float z = Input.GetAxis(VerticalAxisName);
 
@@ -84,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
     public void Respawn()
     {
         characterController.enabled = false;
-        transform.position = spawnPosition.position;
+        transform.position = Vector3.zero;
         characterController.enabled = true;
     }
 }
