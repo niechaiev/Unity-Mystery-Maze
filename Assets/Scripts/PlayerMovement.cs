@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
+using Cinemachine;
 using Unity.Netcode;
 using UnityEngine;
+
 
 public class PlayerMovement : NetworkBehaviour
 {
@@ -31,9 +33,18 @@ public class PlayerMovement : NetworkBehaviour
 
 
 
+
     private void Start()
     {
         Respawn();
+        if(!IsOwner) return;
+        
+        var camera = FindObjectOfType<CinemachineVirtualCamera>();
+        if (camera.Follow == null)
+        {
+            camera.Follow = transform;
+            camera.LookAt = transform;
+        }
     }
 
     private void Update()
