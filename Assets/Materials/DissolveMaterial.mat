@@ -215,9 +215,9 @@ Material:
     - _ATDistance: 1
     - _AddPrecomputedVelocity: 0
     - _AdvancedDissolveCutoutGeometric1Height: 1
-    - _AdvancedDissolveCutoutGeometric1Radius: 12
+    - _AdvancedDissolveCutoutGeometric1Radius: 1
     - _AdvancedDissolveCutoutGeometric2Height: 1
-    - _AdvancedDissolveCutoutGeometric2Radius: 12
+    - _AdvancedDissolveCutoutGeometric2Radius: 1
     - _AdvancedDissolveCutoutGeometric3Height: 1
     - _AdvancedDissolveCutoutGeometric3Radius: 1
     - _AdvancedDissolveCutoutGeometric4Height: 1

@@ -6,13 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d2fc5c32-dc42-42b9-a81d-3ee865a4b8bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FPS-Collab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FPS-Collab/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NetCode Character.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/NetCode Character.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Wall.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/DissolveMaterial.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/DissolveMaterial.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/TestScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientNetworkTransform.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkOwnerAuthoritatives/ClientNetworkTransform.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ClientNetworkTransform.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkOwnerAuthoritatives/ClientNetworkTransform.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DissolveAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DissolveAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkManagerUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OwnerNetworkAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkOwnerAuthoritatives/OwnerNetworkAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/OwnerNetworkAnimator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/NetworkOwnerAuthoritatives/OwnerNetworkAnimator.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +27,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.5.1/Runtime/Core/NetworkBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.5.1/Runtime/Core/NetworkManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.netcode.gameobjects@1.5.1/Runtime/Logging/NetworkLog.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -114,7 +118,7 @@
       <workItem from="1688303562162" duration="1826000" />
       <workItem from="1688461475681" duration="6197000" />
       <workItem from="1688491408967" duration="2825000" />
-      <workItem from="1688560881901" duration="366000" />
+      <workItem from="1688560881901" duration="9191000" />
     </task>
     <servers />
   </component>

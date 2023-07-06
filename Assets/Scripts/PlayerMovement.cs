@@ -42,8 +42,9 @@ public class PlayerMovement : NetworkBehaviour
         var camera = FindObjectOfType<CinemachineVirtualCamera>();
         if (camera.Follow == null)
         {
-            camera.Follow = transform;
-            camera.LookAt = transform;
+            var playerTransform = transform;
+            camera.Follow = playerTransform;
+            camera.LookAt = playerTransform;
         }
     }
 
