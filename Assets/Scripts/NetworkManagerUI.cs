@@ -1,6 +1,7 @@
 using System;
 using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class NetworkManagerUI : MonoBehaviour
@@ -20,14 +21,20 @@ public class NetworkManagerUI : MonoBehaviour
         startHostButton.onClick.AddListener((() =>
         {
             NetworkManager.Singleton.StartHost();
+            EventSystem.current.SetSelectedGameObject(null);
+
         }));        
         startServerButton.onClick.AddListener((() =>
         {
             NetworkManager.Singleton.StartServer();
+            EventSystem.current.SetSelectedGameObject(null);
         }));        
         startClientButton.onClick.AddListener((() =>
         {
             NetworkManager.Singleton.StartClient();
+            EventSystem.current.SetSelectedGameObject(null);
         }));
     }
+    
+    
 }
