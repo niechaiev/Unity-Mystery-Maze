@@ -22,8 +22,6 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: DissolveMaterial
   m_Shader: {fileID: 4800000, guid: 977ce85d64e1849409668a559c7d1c4d, type: 3}
-  m_Parent: {fileID: 0}
-  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _AD_CUTOUT_GEOMETRIC_COUNT_TWO
   - _AD_CUTOUT_GEOMETRIC_TYPE_SPHERE
@@ -48,7 +46,6 @@ Material:
   - TransparentDepthPostpass
   - TransparentBackface
   - RayTracingPrepass
-  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
